@@ -1,0 +1,274 @@
+/* style.css - MMB Representações Comerciais */
+
+/* 1. Variáveis Globais (Cores, Fontes, etc.) */
+:root {
+    --color-primary-dark: #1a5276;
+    --color-primary: #2874a6;
+    --color-primary-light: #2e86c1;
+    
+    --color-text-dark: #2c3e50;
+    --color-text-light: #333;
+    --color-text-muted: #7f8c8d;
+
+    --color-background-light: #f8f9fa;
+    --color-background-accent: #eaf2f8;
+    
+    --font-family-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --container-width: 1200px;
+}
+
+/* 2. Reset Moderno e Padrões Globais */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family-main);
+    line-height: 1.6;
+    color: var(--color-text-light);
+    background-color: var(--color-background-light);
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* 3. Estilos de Tipografia */
+h1 {
+    color: var(--color-primary-dark);
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--color-primary-light);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.section-title {
+    color: var(--color-primary);
+    margin: 2.5rem 0 1.5rem 0;
+    padding-left: 1rem;
+    border-left: 4px solid var(--color-primary-light);
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+.section-title:hover {
+    color: var(--color-primary-dark);
+}
+
+h3 {
+    color: var(--color-text-dark);
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+    line-height: 1.8;
+}
+
+p {
+    margin-bottom: 1rem;
+    text-align: justify;
+    font-size: 1.1rem;
+}
+
+ul {
+    list-style-position: inside;
+    padding-left: 0.5rem;
+}
+
+li {
+    margin-bottom: 0.75rem;
+    padding-left: 0.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+li:hover {
+    background-color: var(--color-background-accent);
+    transform: translateX(5px);
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+    color: var(--color-primary-dark);
+}
+
+/* Acessibilidade: Melhora o outline para navegação por teclado */
+a:focus-visible {
+    outline: 2px solid var(--color-primary-dark);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* 4. Componentes e Layout */
+main > section {
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+main > section:last-of-type {
+    border-bottom: none;
+}
+
+.highlight-box {
+    text-align: center;
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    background-color: var(--color-background-accent);
+    border-left: 5px solid var(--color-primary);
+    border-radius: 8px;
+}
+
+.main-footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #bdc3c7;
+}
+
+.contact-info p {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.business-id {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+.logo-container {
+    margin: 1.5rem 0;
+}
+
+.footer-logo {
+    max-width: 250px;
+    height: auto;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-top: 2rem;
+}
+
+/* 5. Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+    
+    .section-title {
+        font-size: 1.4rem;
+    }
+}
+
+/* Efeitos de hover para melhor interatividade */
+h2:hover {
+    color: #1a5276;
+    transition: color 0.3s ease;
+}
+
+li:hover {
+    background-color: #f8f9fa;
+    padding-left: 10px;
+    transition: all 0.2s ease;
+}
+
+/* Destaque para informações importantes */
+body > p:last-child {
+    background-color: #fef9e7;
+    padding: 15px;
+    border-left: 4px solid #f1c40f;
+}
+
+/* logo do rodapé */
+.footer-logo {
+    max-width: 350px;
+    height: auto;
+    text-align: center;
+}
+
+/* copyright*/
+.copyright {
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/*restrição de acesso*/
+.restricted-access {
+    color: red;
+    text-align: right;
+    margin-top: 20px;
+    font-size: 0.7rem;
+}
+
+
+/* ========================================= */
+/* Ícone Flutuante do WhatsApp              */
+/* ========================================= */
+.whatsapp-float {
+    position: fixed; /* Mantém o ícone fixo na tela */
+    width: 60px;
+    height: 60px;
+    bottom: 25px; /* Distância da parte inferior */
+    right: 25px;  /* Distância da parte direita */
+    background-color: #25D366; /* Cor verde do WhatsApp */
+    color: #FFF; /* Cor do ícone (branco) */
+    border-radius: 50%; /* Deixa o fundo circular */
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25); /* Sombra para dar profundidade */
+    z-index: 1000; /* Garante que o ícone fique acima de outros elementos */
+
+    /* Centraliza o ícone SVG dentro do círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Efeito de transição suave */
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Efeito ao passar o mouse por cima */
+.whatsapp-float:hover {
+    transform: scale(1.1); /* Aumenta um pouco o tamanho */
+    background-color: #128C7E; /* Verde um pouco mais escuro */
+}
